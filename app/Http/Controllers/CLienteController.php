@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use\App\Cliente;
 class CLienteController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class CLienteController extends Controller
      */
     public function index()
     {
-        //
+        $clientes = Cliente::all();
+        return view('clientes.index')->with('clientes',$clientes);
     }
 
     /**

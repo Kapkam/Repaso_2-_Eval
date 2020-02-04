@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use\App\Starbucks;
 
 class StarbucksController extends Controller
 {
@@ -13,7 +14,8 @@ class StarbucksController extends Controller
      */
     public function index()
     {
-        //
+        $locales = Starbucks::all();
+        return view('locales.index')->with('locales',$locales);
     }
 
     /**

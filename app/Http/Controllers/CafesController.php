@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use\App\Cafes;
 class CafesController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class CafesController extends Controller
      */
     public function index()
     {
-        //
+      $cafes = Cafes::all();
+      return view('cafes.index')->with('cafes',$cafes);
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use\App\Stuff;
 
 class StuffController extends Controller
 {
@@ -13,7 +14,8 @@ class StuffController extends Controller
      */
     public function index()
     {
-        //
+      $personal = Stuff::all();
+      return view('personal.index')->with('personal',$personal);
     }
 
     /**

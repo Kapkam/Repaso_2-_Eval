@@ -80,93 +80,21 @@
           </div>
       </nav>
       <hr class="mb-5 mt-5">
-      <!-- Carrousel -->
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{{url('assets\img\slide01.jpg')}}" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="{{url('assets\img\slide02.jpg')}}" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="{{url('assets\img\slide03.jpg')}}" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
       <!-- Cards -->
       <hr class="mb-5 mt-5">
-      <h1 class="mb-3">Prueba Nuestros Cafés!</h1>
+      <h1 class="mb-3">Locales</h1>
       <div class="d-flex flex-wrap justify-content-center">
+        @if(isset($clientes))
+        @foreach ($clientes as $cliente)
         <div class="card mr-3 mb-3" style="width: 18rem;">
-          <img src="{{url('assets\img\cafe_latte.jpg')}}" class="card-img-top" alt="...">
+          <img src="{{url('assets\img\locales.png')}}" class="card-img-top" alt="local">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">{{$cliente->name}}</p>
           </div>
         </div>
-        <div class="card mr-3 mb-3" style="width: 18rem;">
-          <img src="{{url('assets\img\cafe_mocca_blanco.jpg')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card mb-3" style="width: 18rem;">
-          <img src="{{url('assets\img\cafe_mocha.jpg')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card mr-3 mb-3" style="width: 18rem;">
-          <img src="{{url('assets\img\capuccino.jpg')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card mr-3 mb-3" style="width: 18rem;">
-          <img src="{{url('assets\img\caramel_maciatto.jpg')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="{{url('assets\img\latte_maciatto.jpg')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
+        @endforeach
+        @endif
       </div>
-      <hr class="mb-5 mt-5">
-      <h1 class="mb-3">Contátenos</h1>
-      <!-- contactenos -->
-      <div class="text-left">
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Correo Elecctrónico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Comentario</label>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Acepto condiciones de privacidad.</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
       </div>
       <!-- footer -->
       <div class="bg-secondary text-center text-white mt-3">

@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/locales','StarbucksController@index')->name('locales');
+Route::get('/stuff','StuffController@index')->name('stuff');
+Route::get('/clientes','CLienteController@index')->name('clientes');
+Route::get('/cafes','CafesController@index')->name('cafes');
