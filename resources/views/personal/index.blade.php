@@ -92,6 +92,7 @@
             <p class="card-text">{{$stuff->name}}</p>
             <p class="card-text">{{$stuff->apellido}}</p>
             <p class="card-text">{{$stuff->email}}</p>
+            <a href="{{ route('stuff.clientes', $stuff->id) }}" class="btn btn-primary">Clientes</a>
           </div>
         </div>
         @endforeach

@@ -24,3 +24,6 @@ Route::get('/clientes','CLienteController@index')->name('clientes');
 Route::get('/cafes','CafesController@index')->name('cafes');
 
 // Relaciones 1:1
+
+// Relaciones 1:N
+Route::get('/stuff/clientes/{id}','StuffController@listaClientes')->name('stuff.clientes');

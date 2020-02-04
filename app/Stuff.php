@@ -10,4 +10,9 @@ class Stuff extends Model
   protected $fillable = [
       'name', 'apellido', 'email', 'password',
   ];
+
+  public function clientes(){
+    return $this->hasMany('App\Cliente');
+  }
+
 }

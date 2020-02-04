@@ -14,4 +14,8 @@ class Cliente extends Model
   public function cafe(){
     return $this->belongsTo('App\Cafe');
   }
+  public function stuff(){
+    return $this->belongsTo('App\Stuff');
+  }
+
 }

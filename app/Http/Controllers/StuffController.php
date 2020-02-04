@@ -17,7 +17,11 @@ class StuffController extends Controller
       $personal = Stuff::all();
       return view('personal.index')->with('personal',$personal);
     }
-
+    public function listaClientes($stuff_id)
+    {
+      $stuff = Stuff::find($stuff_id);
+      return view('personal.list')->with('stuff',$stuff);
+    }
     /**
      * Show the form for creating a new resource.
      *

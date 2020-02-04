@@ -84,17 +84,13 @@
       <hr class="mb-5 mt-5">
       <h1 class="mb-3">Locales</h1>
       <div class="d-flex flex-wrap justify-content-center">
-        @if(isset($clientes))
-        @foreach ($clientes as $cliente)
+        @if(isset($stuff))
+        <!-- Relacion 1:N -->
+        @foreach ($stuff->clientes as $cliente)
         <div class="card mr-3 mb-3" style="width: 18rem;">
           <img src="{{url('assets\img\locales.png')}}" class="card-img-top" alt="local">
           <div class="card-body">
             <p class="card-text">{{$cliente->name}}</p>
-            <!-- Relacion 1:1 -->
-            <p class="card-text">{{$cliente->cafe->name}}</p>
-            <!-- Relacion 1:N inversa -->
-            <p class="card-text">{{$cliente->stuff->name}}</p>
-            <a href="#" class="btn btn-primary">Pedido</a>
           </div>
         </div>
         @endforeach
