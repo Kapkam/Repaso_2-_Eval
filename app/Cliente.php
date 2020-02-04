@@ -10,4 +10,8 @@ class Cliente extends Model
   protected $fillable = [
       'name',
   ];
+
+  public function pedido(){
+    return $this->belongsTo('App\Cafes');
+  }
 }

@@ -10,4 +10,7 @@ class Cafes extends Model
   protected $fillable = [
       'name',
   ];
+  public function consumidor(){
+    return $this->belongsTo('App\Cliente');
+  }
 }
