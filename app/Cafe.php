@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cafes extends Model
+class Cafe extends Model
 {
   protected $table = 'cafes';
   protected $fillable = [
       'name',
   ];
-  public function consumidor(){
-    return $this->belongsTo('App\Cliente');
+  public function cliente(){
+    return $this->hasOne('App\Cliente');
   }
 }

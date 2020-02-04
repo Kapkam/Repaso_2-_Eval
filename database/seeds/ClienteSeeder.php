@@ -13,27 +13,33 @@ class ClienteSeeder extends Seeder
     {
       DB::table('cliente')->insert([
           'id' => '1',
-          'name'=>'Adrián'
+          'name'=>'Adrián',
+          'cafe_id'=> 1
       ]);
       DB::table('cliente')->insert([
           'id' => '2',
-          'name'=>'Potx'
+          'name'=>'Potx',
+          'cafe_id'=> 2
       ]);
       DB::table('cliente')->insert([
           'id' => '3',
-          'name'=>'Asier'
+          'name'=>'Asier',
+          'cafe_id'=> 3
       ]);
       DB::table('cliente')->insert([
           'id' => '4',
-          'name'=>'Andrés'
+          'name'=>'Andrés',
+          'cafe_id'=> 4
       ]);
       DB::table('cliente')->insert([
           'id' => '5',
-          'name'=>'Aimar'
+          'name'=>'Aimar',
+          'cafe_id'=> 5
       ]);
       DB::table('cliente')->insert([
           'id' => '6',
-          'name'=>'Evalisto'
+          'name'=>'Evalisto',
+          'cafe_id'=> 6
       ]);
     }
 }

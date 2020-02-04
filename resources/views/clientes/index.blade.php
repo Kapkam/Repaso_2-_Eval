@@ -90,6 +90,8 @@
           <img src="{{url('assets\img\locales.png')}}" class="card-img-top" alt="local">
           <div class="card-body">
             <p class="card-text">{{$cliente->name}}</p>
+            <p class="card-text">{{$cliente->cafe->name}}</p>
+            <a href="#" class="btn btn-primary">Pedido</a>
           </div>
         </div>
         @endforeach

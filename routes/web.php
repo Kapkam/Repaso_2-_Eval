@@ -22,3 +22,5 @@ Route::get('/locales','StarbucksController@index')->name('locales');
 Route::get('/stuff','StuffController@index')->name('stuff');
 Route::get('/clientes','CLienteController@index')->name('clientes');
 Route::get('/cafes','CafesController@index')->name('cafes');
+
+// Relaciones 1:1

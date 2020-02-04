@@ -11,7 +11,7 @@ class Cliente extends Model
       'name',
   ];
 
-  public function pedido(){
-    return $this->belongsTo('App\Cafes');
+  public function cafe(){
+    return $this->belongsTo('App\Cafe');
   }
 }

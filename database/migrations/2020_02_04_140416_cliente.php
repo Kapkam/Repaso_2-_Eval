@@ -16,7 +16,9 @@ class Cliente extends Migration
       Schema::create('cliente', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->string('name');
+          $table->unsignedBigInteger('cafe_id'); //atributo de la relación
           $table->timestamps();
+          $table->foreign('cafe_id')->references('id')->on('cafes'); //clave foránea relación 1:1
       });
     }
 
