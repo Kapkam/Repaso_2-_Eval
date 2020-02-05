@@ -84,14 +84,12 @@
       <hr class="mb-5 mt-5">
       <h1 class="mb-3">Locales</h1>
       <div class="d-flex flex-wrap justify-content-center">
-        @if(isset($locales))
-        @foreach ($locales as $local)
+        @if(isset($local))
+        @foreach ($local->productos as $producto)
         <div class="card mr-3 mb-3" style="width: 18rem;">
           <img src="{{url('assets\img\locales.png')}}" class="card-img-top" alt="local">
           <div class="card-body">
-            <p class="card-text">{{$local->name}}</p>
-            <p class="card-text">{{$local->direccion}}</p>
-            <a href="{{ route('local.cafes', $local->id) }}" class="btn btn-primary">Cafes</a>
+            <p class="card-text">{{$producto->name}}</p>
           </div>
         </div>
         @endforeach

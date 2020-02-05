@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
       $this->call(StuffSeeder::class);
       $this->call(CafeSeeder::class);
       $this->call(ClienteSeeder::class);
+      $this->call(CafesStarbucksSeeder::class);
     }
 }

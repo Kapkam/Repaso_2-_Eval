@@ -17,8 +17,11 @@ class StarbucksController extends Controller
         $locales = Starbucks::all();
         return view('locales.index')->with('locales',$locales);
     }
-
-    /**
+    public function listaCafes($local_id)
+    {
+        $local = Starbucks::find($local_id);
+        return view('locales.list')->with('local',$local);
+    }    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

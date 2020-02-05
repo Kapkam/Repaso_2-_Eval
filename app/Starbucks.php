@@ -10,4 +10,7 @@ class Starbucks extends Model
   protected $fillable = [
       'name', 'direccion',
   ];
+  public function productos(){
+    return $this->belongsToMany('App\Cafe');
+  }
 }

@@ -16,7 +16,11 @@ class CafesController extends Controller
       $cafes = Cafe::all();
       return view('cafes.index')->with('cafes',$cafes);
     }
-
+    public function listaLocales($cafe_id)
+    {
+        $cafe = Cafe::find($cafe_id);
+        return view('cafes.list')->with('cafe',$cafe);
+    }
     /**
      * Show the form for creating a new resource.
      *

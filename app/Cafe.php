@@ -13,4 +13,7 @@ class Cafe extends Model
   public function cliente(){
     return $this->hasOne('App\Cliente');
   }
+  public function locales(){
+    return $this->belongsToMany('App\Starbucks');
+  }
 }

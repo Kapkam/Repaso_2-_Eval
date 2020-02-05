@@ -91,6 +91,7 @@
           <div class="card-body">
             <p class="card-text">{{$cafe->name}}</p>
             <p class="card-text">{{$cafe->cliente->name}}</p>
+            <a href="{{ route('cafes.locales', $cafe->id) }}" class="btn btn-primary">Locales</a>
           </div>
         </div>
         @endforeach

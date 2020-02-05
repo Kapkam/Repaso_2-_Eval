@@ -27,3 +27,6 @@ Route::get('/cafes','CafesController@index')->name('cafes');
 
 // Relaciones 1:N
 Route::get('/stuff/clientes/{id}','StuffController@listaClientes')->name('stuff.clientes');
+// Relaciones M:N
+Route::get('/cafes/locales/{id}','CafesController@listaLocales')->name('cafes.locales');
+Route::get('/locales/cafes/{id}','StarbucksController@listaCafes')->name('local.cafes');
